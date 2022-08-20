@@ -158,7 +158,9 @@ This note introduces software programs and platforms that could be used in this 
 
 
 ## R & RStudio
-<BR>
+
+\
+
 ### 1. What is R?
 <BR>
 <center><a href="https://www.r-project.org/"><img src = "https://www.r-project.org/Rlogo.png" width = 100 height = 100></a></center>
