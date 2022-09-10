@@ -1,0 +1,127 @@
+---
+title: 'Assignment #1'
+author: "Cheng Peng"
+date: "Due: 11:59 PM, Monday,  9/12/2022"
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: 4
+    fig_caption: yes
+    number_sections: yes
+    fig_width: 5
+    fig_height: 4
+  word_document: 
+    toc: yes
+    toc_depth: 4
+    fig_caption: yes
+    keep_md: yes
+  html_document: 
+    toc: yes
+    toc_float: false
+    toc_depth: 4
+    fig_width: 6
+    fig_height: 4
+    fig_caption: yes
+    number_sections: yes
+    theme: readable
+---
+<style type="text/css">
+
+div#TOC li {
+    list-style:none;
+    background-image:none;
+    background-repeat:none;
+    background-position:0;
+}
+h1.title {
+  font-size: 24px;
+  color: DarkRed;
+  text-align: center;
+}
+h4.author { /* Header 4 - and the author and data headers use this too  */
+    font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkRed;
+  text-align: center;
+}
+h4.date { /* Header 4 - and the author and data headers use this too  */
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkBlue;
+  text-align: center;
+}
+
+h1 { /* Header 3 - and the author and data headers use this too  */
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    color: darkred;
+    text-align: center;
+}
+h2 { /* Header 3 - and the author and data headers use this too  */
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    color: navy;
+    text-align: left;
+}
+
+h3 { /* Header 3 - and the author and data headers use this too  */
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+    color: navy;
+    text-align: left;
+}
+
+</style>
+
+
+
+```{r setup, include=FALSE}
+# code chunk specifies whether the R code, warnings, and output 
+# will be included in the output files.
+if (!require("knitr")) {
+   install.packages("knitr")
+   library(knitr)
+}
+
+knitr::opts_chunk$set(echo = TRUE,       
+                      warnings = FALSE,   
+                      results = TRUE,   
+                      message = FALSE,
+                      fig.align='center', 
+                      fig.pos = 'ht')
+#knitr::opts_knit$set(root.dir = 'C:\\STA551\\wkdir0')
+```
+\
+
+
+
+\
+
+
+In this assignment, you create a very basic personal web page to showcase your professional skills. The contents to be included on the web page are what you expect your job interviewers to read.
+
+**Minimum Requirements**
+
+1. Layout
+
+   (a) Use the basic template that I showed you in the class
+   
+   (b) Choose appropriate font sizes, colors, faces for titles, and other contents.
+   
+
+2. Hyperlinks: you are expected to include several hyperlinks to the following web objects on your web page.
+
+   (a) at least one image on the web page. The image could be your portrait, a photo of your pets, the WCU logo, or simply a scenic photo that is relevant to the contents of the web page.
+   
+   (b) at least one file (such as your project report or an essay you like to share with your viewers).  You save the file (in any format) to your local drive and uploaded it to the GitHub repository (your web page repository).
+   
+   (c) at least one article (or an eBook) on a web server or link to a web page such as WCU's web page.  That is, you need to put a link on your web page directly to other web pages without downloading anything to your local drive and then uploading it to your GitHub repository.
+   
+
+
+**Optional Features**
+
+You can add any feature beyond the minimum requirements on your web page. For example, you can add multiple tables, nest tables with unequal cells, multiple pages for different topics, etc.
+
+
+
