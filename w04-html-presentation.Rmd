@@ -193,7 +193,7 @@ class: inverse, center, middle
 
 class: top
 
-# <center>Back-to-back Comaprisons</center>
+# <center>Back-to-back Comparisons</center>
 
 
 #### Highlighting Texts using `*` and `{{ }}`
