@@ -1,10 +1,9 @@
-
 ---
 title: '<font size = 7 color = "skyblue">HTML Presentations </font>'
 subtitle: '<font size = 6 color = "gold">An Example </font>'
 author: '<font size = 6 color = "skyblue">Cheng Peng </font>'
 institute: '<!--img src = "https://www.wcupa.edu/communications/images/mainLogo1.png" width="130" height="100"--><br><font size = 3 color = "skyblue">West Chester University of Pennsylvania</font><br> '
-date: '<font color = "skyblue" size =5> 09/20/2022 <font> <br> <font color = "skyblue" size =4> Prepared for <br> </font> <br> <font color = "gold" size = 6> STA 490: Capstone Statistics </font> <br> <br> <font color = "white" size = 5> Slides available at: https://rpubs.com/cpeng/eCOTS2022 AND https://pengdsci.github.io/eCOTS2022/</font>'
+date: '<font color = "skyblue" size =5> 09/20/2022 <font> <br> <font color = "skyblue" size =4> Prepared for <br> </font> <br> <font color = "gold" size = 6> STA 490: Capstone Statistics </font> <br> <br> <font color = "white" size = 5> Slides available at: https://rpubs.com/cpeng/Nanja AND https://pengdsci.github.io/STA490/w04-html-presentation.html</font>'
 output:
   xaringan::moon_reader:
     #yolo: true  #randomly insert new slides with background image of Karl’s mustache photo into existing slides
