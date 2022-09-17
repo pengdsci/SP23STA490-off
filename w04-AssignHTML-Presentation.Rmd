@@ -1,0 +1,141 @@
+
+---
+title: "STA 490 Assignments #2 and #3"
+author: "HTML Presentation - Linear Regression Modeling"
+date: "Slide due: Monday, 9/25 <br> Oral Presentation: 9/27 and 9/29"
+output:
+  html_document: 
+    toc: yes
+    toc_float: true
+    toc_depth: 4
+    fig_width: 6
+    fig_caption: yes
+    number_sections: yes
+    theme: readable
+  pdf_document: 
+    toc: yes
+    toc_depth: 4
+    fig_caption: yes
+    number_sections: yes
+    fig_width: 5
+    fig_height: 4
+---
+<style type="text/css">
+
+div#TOC li {
+    list-style:none;
+    background-image:none;
+    background-repeat:none;
+    background-position:0;
+}
+h1.title {
+  font-size: 24px;
+  color: DarkRed;
+  text-align: center;
+}
+h4.author { /* Header 4 - and the author and data headers use this too  */
+    font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkRed;
+  text-align: center;
+}
+h4.date { /* Header 4 - and the author and data headers use this too  */
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkBlue;
+  text-align: center;
+}
+
+h1 { /* Header 3 - and the author and data headers use this too  */
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    color: darkred;
+    text-align: center;
+}
+h2 { /* Header 3 - and the author and data headers use this too  */
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    color: navy;
+    text-align: left;
+}
+
+h3 { /* Header 3 - and the author and data headers use this too  */
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+    color: navy;
+    text-align: left;
+}
+
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Objectives
+
+The objectives of this assignment are
+
+* perform linear regression analysis you learned in STA319; 
+
+* prepare HTML-based slides using relevant R packages via R Markdown.
+
+* give an oral presentation in class to report the regression results.
+
+# Materials
+
+The main task for week #5 is to review regression modeling. This assignment serves as a rigorous review of the regression techniques you learned in STA 319. Please go to the following web page to find a data set at your preference to build a linear regression model:
+
+https://people.sc.fsu.edu/~jburkardt/datasets/regression/regression.html
+
+There are 60+ data sets on the web above the web page. They are all good for regression analysis. After selecting your data set, please go to the D2L discussion forum to write a sentence description so your classmates will not use the same data set for their assignments. To post in D2L discussion Forum: `log into D2L -> STA 490 Course Page -> Communication -> Discussion`.
+
+
+# HTML Slide Preparation
+
+Prepare an HTML presentation with up to 10 slides. The required components are
+
+1. The research / practical question(s)
+2. Description of data
+3. Build a model and perform diagnostics
+4. Report the final model (inference of the regression coefficients) and interpret the output.
+5. Conclusions.
+
+You are expected to include both tables and graphs in the HTML presentation.
+
+
+# Publishing Your HTML Presentation
+
+You are expected to publish your HTML presentation on either RPubs or GitHub.
+
+* To use RPubs (https://rpubs.com/), you need to create an account. Once you log into your account, you can publish you HTML document by `Publish` in the top-right corner of the preview or click the `Publish` button in the R Markdown source window (also in the top-right corner of the window).
+
+* To host the HTML presentation on GitHub, you are encouraged to create and separate folder to store all related files (including images, data sets, etc.).
+
+* Add the link to your final presentation to your personal web page you created in assignment #1.
+
+
+# Timelines
+
+Assignment #2 focuses on the creation of the HTML presentation slides and assignment #3 focuses on oral presentation. The following are tentative timelines for these two assignments.
+
+1. Find a data set from the above website and post your data set on the D2L discussion forum so your classmates will not use your data set for their regression analysis (before our class meeting on Tuesday, 9/19).
+ 
+2. Review linear regression modeling (my week 05 lecture note as a reference) before Thursday, 9/21. We will not meet on Thursday, 9/21. You are expected to use the time to perform regression analysis and prepare the HTML presentation. The presentation slide in HTML format is due Sunday, 9/25.
+
+3. I will give you feedback on Monday (9/26) so you can revise your presentation.
+
+4. In-class oral presentations will be held in week 5. Everybody has 10 minutes to present the analysis results. The order of presentation will be based on the alphabetical order of your last name. I will post that information later.
+
+ 
+# Assessments
+
+Both HTML slides (assignment #2) and oral presentation (assignment #3) will be evaluated. The HTML slides will be evaluated based on whether all required components are included, whether the key analysis results are appropriately summarized in the HTML slides, and whether the presentation is correctly published on either RPubs or GitHub or both.
+
+The oral presentation will be counted as assignment #3 and will be graded based on the rubrics that can be found at (https://pengdsci.github.io/STA490/w05-ProjectPresentationRubrics.html).
+
+
+
+
+
+
