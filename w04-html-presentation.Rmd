@@ -1,0 +1,367 @@
+---
+title: '<font size = 7 color = "skyblue">HTML Presentations </font>'
+subtitle: '<font size = 6 color = "gold">An Example </font>'
+author: '<font size = 6 color = "skyblue">Cheng Peng </font>'
+institute: '<!--img src = "https://www.wcupa.edu/communications/images/mainLogo1.png" width="130" height="100"--><br><font size = 3 color = "skyblue">West Chester University of Pennsylvania</font><br> '
+date: '<font color = "skyblue" size =5> 09/20/2022 <font> <br> <font color = "skyblue" size =4> Prepared for <br> </font> <br> <font color = "gold" size = 6> STA 490: Capstone Statistics </font> <br> <br> <font color = "white" size = 5> Slides available at: https://rpubs.com/cpeng/eCOTS2022 AND https://pengdsci.github.io/eCOTS2022/</font>'
+output:
+  xaringan::moon_reader:
+    #yolo: true  #randomly insert new slides with background image of Karl’s mustache photo into existing slides
+    lib_dir: libs
+    self_contained: true
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+      #titleSlideClass: [center, middle, inverse]  # default set up of the title page
+      #titleSlideClass: [top, left, inverse]
+      #autoplay: 30000     # This sets autoplay, 30000 = 10 seconds
+      #countdown: 30000    # The timer will count down to 00:00 then continue with red time
+---
+
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+##
+if(!require('xaringan')) {
+  remotes::install_github("yihui/xaringan")
+  library('xaringan')
+}
+if (!require("knitr")) {
+   install.packages("knitr")
+   library(knitr)
+}
+if (!require("leaflet")) {
+   install.packages("leaflet")
+   library(leaflet)
+}
+# remotes::install_github("yihui/xaringan")
+```
+
+
+
+class: inverse, middle   
+<!-- This sets the background color to black and align the text in the slide -->
+<!-- Comments must be placed after the line of the page of configuration and also 
+     be placed in separate lines.  --> 
+<!-- use "---" to close each slide -->
+<!-- not comments should placed immediately before "---" -->
+
+## <center><b>Agenda </b></center>    
+<!-- level 2 title -->
+
+### Package Installation
+
+### YAML
+<!-- level 3 title  -->
+
+### Slides Designs
+<!-- level 3 title  -->
+
+### Publishing Presentation: RPubs and GitHub
+
+---
+
+
+
+
+class: inverse, center, middle
+<!-- inverse option -->
+
+# Required Packages
+---
+
+
+
+class: middle
+<!-- some comments -->
+
+## <center>Packages and Tools</center>
+
+### Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
+<!-- hyperlink with a site name -->
+
+
+```{}
+remotes::install_github("yihui/xaringan")
+```
+
+
+
+--
+
+### You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/)
+
+- Create a new R Markdown document from the menu `File -> New File -> R Markdown -> From Template -> Ninja Presentation`;
+
+--
+
+- Click the `Knit` button to compile it;
+
+---
+
+
+
+class: inverse, center, middle
+<!-- inverse option -->
+
+# YAML Stuff
+---
+
+
+
+
+class: middle
+
+## <center>YAML: HTML Tags </center>
+<!-- commenting  -->
+
+<img src = "https://github.com/pengdsci/STA490/raw/main/images/NinJaImage.png">
+
+
+- Except for the output, all other fields in YAML can be written in HTML.
+
+- All HTML tags MUST be placed in a single line and MUST be placed in single quotes ''.
+---
+
+
+
+
+class: middle
+
+## <center>YAML: Output Controls</center>
+<!-- commenting  -->
+
+- Slides can be automatically played if you set the `autoplay` option under `nature`, e.g. go to the next slide every 30 seconds in a lightning talk:
+
+    ```yaml
+    output:
+      xaringan::moon_reader:
+        nature:
+          autoplay: 30000
+    ```
+
+- If you want to restart the play after it reaches the last slide, you may set the sub-option `loop` to TRUE, e.g.,
+
+    ```yaml
+    output:
+      xaringan::moon_reader:
+        nature:
+          autoplay:
+            interval: 30000
+            loop: true
+    ```
+---
+
+
+class: middle
+
+## <center>YAML: Output Control (cont'd)</center>
+
+- A countdown timer can be added to every page of the slides using the `countdown` option under `nature`, e.g. if you want to spend one minute on every slide, you can set:
+
+    ```yaml
+    output:
+      xaringan::moon_reader:
+        nature:
+          countdown: 60000
+    ```
+
+    The timer will count down from `01:00`, to `00:59`, `00:58`, ... When the time is out, the timer will continue but turn red like <font color = "darkred"  face = "Verdana"> 00:00</font>, to <font color = "darkred"  face = "Verdana">00:01</font>, ...
+    
+    
+- The title slide is set to `class: center, middle, inverse, title-slide` by default. You can change the classes applied to the title slide with the `titleSlideClass` option of `nature` (`title-slide` is always applied).
+
+    ```yaml
+    output:
+      xaringan::moon_reader:
+        nature:
+          titleSlideClass: [top, left, inverse]
+    ```
+---
+
+
+
+
+class: inverse, center, middle
+<!-- inverse option -->
+
+# Slide Design Components
+---
+
+
+class: top
+
+# <center>Back-to-back Comaprisons</center>
+
+
+#### Highlighting Texts using `*` and `{{ }}`
+
+
+.pull-left[
+
+- An example using a leading `*`:  You type the following commands
+
+<img src ="https://github.com/pengdsci/STA490/raw/main/images/asteriskHighlight.png" width = "250" height ="100">
+
+Output:
+
+```r
+if (TRUE) {
+* message("Very important!")
+}
+```                                        
+
+This is invalid R code, so it is a plain fenced code block that is not executed.
+]
+
+.pull-right[
+- An example using `{{}}`: You type the following command
+
+<img src ="https://github.com/pengdsci/STA490/raw/main/images/doubleCurlyBracket.png" width = "250" height ="100"> 
+
+Output:
+```{r }
+if (TRUE) {
+{{ message("Very important!") }}
+}
+```
+
+It is valid R code so you can run it. Note that `{{}}` can wrap an R expression of multiple lines.
+]
+---
+
+
+# Highlighting Output Table Rows
+
+When you enable line-highlighting, you can also use the chunk option `highlight.output` to highlight specific lines of the text output from a code chunk. For example, `highlight.output = TRUE` means highlighting all lines, and `highlight.output = c(1, 3)` means highlighting the first and third line.
+
+````
+```{ highlight.output=c(1, 3), echo=FALSE}
+head(iris)
+```
+````
+
+```{r, highlight.output=c(1, 3), echo=FALSE}
+head(iris)
+```
+---
+
+
+
+# <center> Mathematical Expressions</center>
+
+You can write LaTeX math expressions inside a pair of dollar signs, e.g. `$\alpha+\beta$` renders $\alpha+\beta$. You can use the display style with double dollar signs:
+
+```
+$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
+```
+
+$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
+
+Some Limitations:
+
+- The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting `$$` must appear in the very beginning of a line, followed immediately by a non-space character, and the ending `$$` must be at the end of a line, led by a non-space character;
+
+- There should not be spaces after the opening `$` or before the closing `$`.
+
+- Math does not work on the title slide.
+
+---
+
+
+
+
+# <center>R Outputs </center>
+
+```{r comment='#'}
+# a boring regression
+fit = lm(dist ~ 1 + speed, data = cars)
+coef(summary(fit))
+```
+
+---
+
+
+# <center>R Plots</center>
+
+```{r cars, fig.height=4, fig.align='center'}
+par(mar = c(4, 4, 1, .1))
+plot(cars, pch = 19, col = 'darkgray', las = 1)
+abline(fit, lwd = 2)
+```
+
+---
+
+# <center> Tables </center>
+
+If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
+
+```{r}
+knitr::kable(head(iris), format = 'html')
+```
+
+---
+
+class: center, middle
+
+# <center>Include Images </center>
+
+You can simply use HTML `img` tag to include an image into the slide.
+
+<img src = "https://github.com/pengdsci/STA490/raw/main/images/goldenRamLogo.png">
+
+---
+
+
+class: center, middle
+
+# <center>Interactive Graphic Generated From R </center>
+
+
+```{r out.width='100%', fig.height=6}
+leaflet() %>% addTiles() %>% setView(-75.6001, 39.95219, zoom = 17)
+```
+---
+
+
+class: center, middle
+
+# <center>Embedding YouTube Videos </center>
+
+<iframe width="470" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>   
+---
+
+
+class: inverse, center, middle
+
+# Publish Your Presentation
+
+---
+
+class: middle
+
+#  <center>RPubs and GitHub</center>
+
+- `RPubs` is **a free-to-use publishing platform built by Rstudio**. It allows you to publish both HTML reports and presentations directly from Rstudio to the web. 
+
+    To use RPubs, you need to register an account with RPubs before you publish you presentation through on Rpubs through R Markdown.
+    
+
+- `GitHub` is also a really great platform for publishing HTML files for free.
+
+
+
+---
+
+
+
+class: inverse, center, middle
+
+# Thanks!
+
+
+
+
