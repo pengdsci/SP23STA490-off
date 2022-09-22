@@ -174,7 +174,7 @@ The oral presentation will be counted as assignment #3 and will be graded based 
 
 # Submissions
 
-After you finish the HTML slides, you must publish them either on GitHub or RPubs. You should review your slides on GitHub or RPubs and make sure your presentation is bug-free. The last step is to copy the URL and paste it to the D2L drop box. No other files are expected to upload to the D2l drop box.
+After you finish the HTML slides, you must publish them on either GitHub or RPubs. You should review your slides on GitHub or RPubs and make sure your presentation is bug-free. The last step is to copy the URL and paste it to the D2L drop box. No other files are expected to upload to the D2l drop box.
 
 
 
