@@ -1,8 +1,7 @@
-
 ---
 title: "STA 490 Assignments #2 and #3"
 author: "HTML Presentation - Linear Regression Modeling"
-date: "Slide due: Monday, 9/25 <br> Oral Presentation: 9/27 and 9/29"
+date: "HTML Slides Due: Monday, 9/25 <br> Oral Presentation: 9/27 and 9/29"
 output:
   html_document: 
     toc: yes
@@ -70,7 +69,15 @@ h3 { /* Header 3 - and the author and data headers use this too  */
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+if (!require("knitr")) {
+   install.packages("knitr")
+   library(knitr)
+}
 ```
+
+\
+
 
 # Objectives
 
@@ -91,7 +98,37 @@ https://people.sc.fsu.edu/~jburkardt/datasets/regression/regression.html
 There are 60+ data sets on the web above the web page. They are all good for regression analysis. After selecting your data set, please go to the D2L discussion forum to write a sentence description so your classmates will not use the same data set for their assignments. To post in D2L discussion Forum: `log into D2L -> STA 490 Course Page -> Communication -> Discussion`.
 
 
-# HTML Slide Preparation
+\
+
+<font color = "blue">**Read Data to R Directly from Web Page**</font>
+
+\
+
+Since all data sets are in the .txt format, you can use the R function `read.table` to read the data set to R directly. Next, I use the data set `x61_01.txt` as an example to show you how to read this data set into R. The data set is at (https://people.sc.fsu.edu/~jburkardt/datasets/regression/x61_01.txt). The URL will be placed in `read.table`. A screenshot is given below.
+
+\
+
+<center><img src = "https://raw.githubusercontent.com/pengdsci/STA490/main/images/dataset_x61_01.png"></center>
+
+\
+
+We can see from the above screenshot, the first 32 lines describe the data set. They are not data lines. We need to skip these lines to read actual data rows.  `option =` will be used to accomplish this task.  After reading in data values into R, the system will automatically assign variable names `V1, V2, V3, V4, V5, V6, V7, V8`. We also need to change these variable names to their original corresponding names. The following code illustrates how I read the data set to R. 
+
+
+\
+
+```{r}
+# we use skip = 23 to skip the first 23 rows since they are not data lines!
+x61.01 = read.table("https://people.sc.fsu.edu/~jburkardt/datasets/regression/x61_01.txt", skip = 23)
+# next we rename the automatically generated variables using the original names given in the description
+# using function names().
+names(x61.01) = c("Index", "A1", "A2", "A3", "A4", "A5", "B")
+# check the data set was read correctly for the next step analysis
+kable(x61.01)  # load package {knitr}
+```
+
+
+# HTML Slides Preparation
 
 Prepare an HTML presentation with up to 10 slides. The required components are
 
