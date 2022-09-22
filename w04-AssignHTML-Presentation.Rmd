@@ -1,7 +1,7 @@
 ---
 title: "STA 490 Assignments #2 and #3"
 author: "HTML Presentation - Linear Regression Modeling"
-date: "HTML Slides Due: Monday, 9/25 <br> Oral Presentation: 9/27 and 9/29"
+date: 'HTML Slides Due:<font color = "red"> Sunday, 9/25 </font><br> Oral Presentation: 9/27 and 9/29'
 output:
   html_document: 
     toc: yes
@@ -170,6 +170,15 @@ Assignment #2 focuses on the creation of the HTML presentation slides and assign
 Both HTML slides (assignment #2) and oral presentation (assignment #3) will be evaluated. The HTML slides will be evaluated based on whether all required components are included, whether the key analysis results are appropriately summarized in the HTML slides, and whether the presentation is correctly published on either RPubs or GitHub or both.
 
 The oral presentation will be counted as assignment #3 and will be graded based on the rubrics that can be found at (https://pengdsci.github.io/STA490/w05-ProjectPresentationRubrics.html).
+
+
+# Submissions
+
+After you finish the HTML slides, you must publish them either on GitHub or RPubs. You should review your slides on GitHub or RPubs and make sure your presentation is bug-free. The last step is to copy the URL and paste it to the D2L drop box. No other files are expected to upload to the D2l drop box.
+
+
+
+
 
 
 
