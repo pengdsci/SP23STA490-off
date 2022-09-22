@@ -108,7 +108,11 @@ Since all data sets are in the .txt format, you can use the R function `read.tab
 
 \
 
-<center><img src = "https://raw.githubusercontent.com/pengdsci/STA490/main/images/dataset_x61_01.png"></center>
+```{r fig.align='center', out.width = '90%'}
+include_graphics("https://raw.githubusercontent.com/pengdsci/STA490/main/images/dataset_x61_01.png")
+```
+
+<!-- <center><img src = "https://raw.githubusercontent.com/pengdsci/STA490/main/images/dataset_x61_01.png"></center> -->
 
 \
 
