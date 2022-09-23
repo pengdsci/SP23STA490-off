@@ -116,7 +116,7 @@ include_graphics("https://raw.githubusercontent.com/pengdsci/STA490/main/images/
 
 \
 
-We can see from the above screenshot, the first 32 lines describe the data set. They are not data lines. We need to skip these lines to read actual data rows.  `option =` will be used to accomplish this task.  After reading in data values into R, the system will automatically assign variable names `V1, V2, V3, V4, V5, V6, V7, V8`. We also need to change these variable names to their original corresponding names. The following code illustrates how I read the data set to R. 
+We can see from the above screenshot, the first 32 lines describe the data set. They are not data lines. We need to skip these lines to read actual data rows.  `skip =` will be used to accomplish this task.  After reading in data values into R, the system will automatically assign variable names `V1, V2, V3, V4, V5, V6, V7, V8`. We also need to change these variable names to their original corresponding names. The following code illustrates how I read the data set to R. 
 
 
 \
@@ -191,7 +191,7 @@ The oral presentation will be counted as assignment #3 and will be graded based 
 
 # Submissions
 
-After you finish the HTML slides, you must publish them on either GitHub or RPubs. You should review your slides on GitHub or RPubs and make sure your presentation is bug-free. The last step is to copy the URL and paste it to the D2L drop box. No other files are expected to upload to the D2l drop box.
+After you finish the HTML slides, you must publish them on either GitHub or RPubs. You should review your slides on GitHub or RPubs and make sure your presentation is bug-free. The last step is to copy the URL and paste it to the D2L drop box. No other files are expected to be uploaded to the D2L drop box.
 
 
 

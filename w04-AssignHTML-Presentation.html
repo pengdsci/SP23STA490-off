@@ -327,7 +327,7 @@ h3 { /* Header 3 - and the author and data headers use this too  */
 <!-- <center><img src = "https://raw.githubusercontent.com/pengdsci/STA490/main/images/dataset_x61_01.png"></center> -->
 <p><br />
 </p>
-<p>We can see from the above screenshot, the first 32 lines describe the data set. They are not data lines. We need to skip these lines to read actual data rows. <code>option =</code> will be used to accomplish this task. After reading in data values into R, the system will automatically assign variable names <code>V1, V2, V3, V4, V5, V6, V7, V8</code>. We also need to change these variable names to their original corresponding names. The following code illustrates how I read the data set to R.</p>
+<p>We can see from the above screenshot, the first 32 lines describe the data set. They are not data lines. We need to skip these lines to read actual data rows. <code>skip =</code> will be used to accomplish this task. After reading in data values into R, the system will automatically assign variable names <code>V1, V2, V3, V4, V5, V6, V7, V8</code>. We also need to change these variable names to their original corresponding names. The following code illustrates how I read the data set to R.</p>
 <p><br />
 </p>
 <pre class="r"><code># we use skip = 23 to skip the first 23 rows since they are not data lines!
@@ -470,7 +470,7 @@ kable(x61.01)  # load package {knitr}</code></pre>
 </div>
 <div id="submissions" class="section level1" number="8">
 <h1 number="8"><span class="header-section-number">8</span> Submissions</h1>
-<p>After you finish the HTML slides, you must publish them on either GitHub or RPubs. You should review your slides on GitHub or RPubs and make sure your presentation is bug-free. The last step is to copy the URL and paste it to the D2L drop box. No other files are expected to upload to the D2l drop box.</p>
+<p>After you finish the HTML slides, you must publish them on either GitHub or RPubs. You should review your slides on GitHub or RPubs and make sure your presentation is bug-free. The last step is to copy the URL and paste it to the D2L drop box. No other files are expected to be uploaded to the D2L drop box.</p>
 </div>
 
 
