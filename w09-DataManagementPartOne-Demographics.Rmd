@@ -202,15 +202,6 @@ demographic00[is.na(demographic00)] <- 99
 #     Q8.3=table(demographic00$Q8_3),
 #     Q8.5=table(demographic00$Q8_5),
 #     Q8.6=table(demographic00$Q8_6),
-#     Q.9=table(demographic00$Q9),
-#     Q.11=table(demographic00$Q11),
-#     Q.13=table(demographic00$Q13),
-#     Q.14=table(demographic00$Q14),
-#     Q.15=table(demographic00$Q15),
-#     Q.16=table(demographic00$Q16),
-#     Q.17=table(demographic00$Q17),
-#     Q.18=table(demographic00$Q18),
-#     Q.19=table(demographic00$Q19),
 #     Q.20=table(demographic00$Q20)
 #     )
 ```
@@ -223,15 +214,7 @@ grp.empl = Q8_3:   1 = [0,5]  entry, 2 = [5.5,10] junior, 3 = [10.5, 35]   senio
 kid.num = Q8_5: 1 = (0) No child, 2 = at least one child
 home.size = Q8_6:  1 = (1), 2 = (2), 3 = 3 or more
 
-gender = Q9:  1 = (2) female, 2 = (1,3,5,7) male 
-race = Q11:   1 = (1)   white,   2 = (2,3) other
-marital.st = Q13: 1 = (1) single, 2 = (2) married/civil Partner, 3 = other
-disability = Q14:  1 = yes,  2 = No
-religion = Q15:  1 = 9 (no religion), 2 = (1,2,3,6,7,8,10,11,99) (religion)
-Sexual.orient = Q16:  1 = (4)  heterosexual,  2 = (1,2,3,5,6,7,10) other
-poli.affil = Q17: 1 = (4)ind, 2 = (5,6,7)  democrats, 3 = (1,2,3, 99) other
-SW.Program = Q18: 1 = (1) BSW, 2 = (2,99) MSW
-Urbanity = Q19:  1 = (1) urban, 2 = (2) rural, 3 = (3) suburban
+
 Spirituality = Q20: 1 = (1,2,3) low, 2 = (4)   moderate,  3 = (5,6,7) high
 ```
 
@@ -253,62 +236,36 @@ kid.num=cut(Q8.5, breaks=c(-1,1,100), labels=c("No-kid", "With-kid"))
 Q8.6=demographic00$Q8_6
 home.size=cut(Q8.6, breaks=c(-1,2,100), labels=c("1-2", "3+"))
 #
-Q.9=demographic00$Q9
-gender=rep("male", length(Q.9))
-gender[which(Q.9==2)]="female"
 #
-Q.11=demographic00$Q11
-race=rep("other", length(Q.11))
-race[which(Q.11==1)]="white"
-#
-Q.13=demographic00$Q13
-marital.st = rep("other", length(Q.13))
-marital.st[which(Q.13==1)]="single"
-marital.st[which(Q.13==2)]="married"
-#
-Q.14=demographic00$Q14
-disability=rep("yes", length(Q.14))
-disability[which(Q.14==2)]="no"
-#
-Q.15=demographic00$Q15
-religion=rep("religion", length(Q.15))
-religion[which(Q.15==1)]="no-religion"
-#
-Q.16=demographic00$Q16
-sexual.orient=rep("other", length(Q.16))
-sexual.orient[which(Q.16==4)]="heterosexual"
-#
-Q.17=demographic00$Q17
-poli.affil = rep("Republican", length(Q.17))
-poli.affil[Q.17 %in% c(5,6)]="ModDemocrats"
-poli.affil[Q.17 %in% c(7)]="StrongDemocrats"
-poli.affil[which(Q.17 ==4)]="independent"
-#
-Q.18=demographic00$Q18
-SW.program=rep("MSW", length(Q.18))
-SW.program[which(Q.18==1)]="BSW"
-#
-Q.19=demographic00$Q19
-urbanity=rep("urban", length(Q.19))
-urbanity[which(Q.19==2)]="rural"
-urbanity[which(Q.19==3)]="suburban"
 #
 Q.20=demographic00$Q20
 spirituality=rep("high", length(Q.20))
 spirituality[which(Q.20==2)]="moderate"
 spirituality[Q.20 %in% c(1,2,3)]="low"
 #
-new.demographics=data.frame(grp.age, grp.edu, grp.empl, kid.num, home.size, gender, race,
-           marital.st, disability, religion, sexual.orient, poli.affil,
-           SW.program, urbanity, spirituality)
+new.demographics=data.frame(grp.age, grp.edu, grp.empl, kid.num, home.size, 
+                           # gender, race,
+                           # marital.st, disability, religion, sexual.orient, poli.affil,
+                           # SW.program, urbanity, 
+           spirituality)
 #new.demographics
 ```
 
+# Assignment
 
+Use the same methods to re-categorize the following demographic variables and make sure the re-defined the demographic variable is meaningful.
 
-
-
-
-
+```
+gender = Q9  
+race = Q11   
+marital.st = Q13
+disability = Q14  
+religion = Q15  
+Sexual.orient = Q16  
+poli.affil = Q17 
+SW.Program = Q18 
+Urbanity = Q19  
+```
+As a rule of thumb, each category in the redefined variables must have at least 20 subjects to guarantee that the subsequent regression modeling is valid. 
 
 
